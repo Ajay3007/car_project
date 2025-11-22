@@ -1,0 +1,9 @@
+title: Car Project : OOP in Modern C++
+email: ""
+description: "Hands-on Modern C++ OOP example"
+baseurl: "/car_project" # change if hosting under a project page (see notes)
+url: "https://Ajay3007.github.io" # replace with your GitHub Pages base URL if you want
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown
