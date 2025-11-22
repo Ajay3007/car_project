@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "kill car_app",
+      "type": "shell",
+      "command": "if (Get-Process -Name 'car_app' -ErrorAction SilentlyContinue) { Stop-Process -Name 'car_app' -Force } else { Write-Output 'Process not running' }",
+      "problemMatcher": []
+    },
+    {
+      "label": "g++ build car_app",
+      "type": "shell",
+      "command": "C:/Softwares/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-g",
+        "Engine.cpp",
+        "Wheel.cpp",
+        "FuelTank.cpp",
+        "Car.cpp",
+        "Garage.cpp",
+        "MyCarMain.cpp",
+        "-o",
+        "${workspaceFolder}\\car_app.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "kill car_app"
+      ],
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      }
+    },
+    {
+      "label": "build and run car_app",
+      "type": "shell",
+      "dependsOn": [
+        "g++ build car_app"
+      ],
+      "dependsOrder": "sequence",
+      "command": "${workspaceFolder}\\car_app.exe",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    }
+  ]
+}

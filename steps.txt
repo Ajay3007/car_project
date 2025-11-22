@@ -1,0 +1,61 @@
+---------------------------------------------------------------------------------------------------------------
+                                    STEPS TO RUN THE APPLICATION
+---------------------------------------------------------------------------------------------------------------
+To run the MyCarMain.cpp:
+1. Navigate to the dir where all the .cpp/.h files are placed
+2. Run below command:
+    g++ -std=c++17 Engine.cpp Wheel.cpp FuelTank.cpp Car.cpp Garage.cpp MyCarMain.cpp -o car_app.exe
+3. .\car_app.exe
+
+---------------------------------------------------------------------------------------------------------------
+                                            OUTPUT : 
+---------------------------------------------------------------------------------------------------------------
+
+[Engine] created: serial=ENG-0001, type=1, horsepower=150
+[FuelTank] created: capacity=50 liters
+[Car] created: VIN=VIN-1234567890
+[Wheel] created: id=1, position=0, diameter=16, pressure=32
+[Car] Added wheel: VIN=VIN-1234567890, Total Wheels=1
+[Wheel] created: id=2, position=1, diameter=16, pressure=32
+[Car] Added wheel: VIN=VIN-1234567890, Total Wheels=2
+[Wheel] created: id=3, position=2, diameter=16, pressure=30
+[Car] Added wheel: VIN=VIN-1234567890, Total Wheels=3
+[Wheel] created: id=4, position=3, diameter=16, pressure=30
+[Car] Added wheel: VIN=VIN-1234567890, Total Wheels=4
+[Car Diagnostics] VIN: VIN-1234567890, Odometer: 0 km, Wheels: 4
+[Engine Diagnostics] Serial: ENG-0001, Type: 1, Horsepower: 150, State: STOPPED, RPM: 0
+[FuelTank Diagnostics] Capacity: 50 liters, Current Level: 50 liters
+  [Wheel] ID: 1, Position: 0, Diameter: 16, Pressure: 32
+  [Wheel] ID: 2, Position: 1, Diameter: 16, Pressure: 32
+  [Wheel] ID: 3, Position: 2, Diameter: 16, Pressure: 30
+  [Wheel] ID: 4, Position: 3, Diameter: 16, Pressure: 30
+[Engine] started: serial=ENG-0001, rpm=800
+[FuelTank] consumed: new level=43.3333 liters
+[Car] Drove 100 km: VIN=VIN-1234567890, Odometer=100 km
+[Car Diagnostics] VIN: VIN-1234567890, Odometer: 100 km, Wheels: 4
+[Engine Diagnostics] Serial: ENG-0001, Type: 1, Horsepower: 150, State: RUNNING, RPM: 800
+[FuelTank Diagnostics] Capacity: 50 liters, Current Level: 43.3333 liters
+  [Wheel] ID: 1, Position: 0, Diameter: 16, Pressure: 32
+  [Wheel] ID: 2, Position: 1, Diameter: 16, Pressure: 32
+  [Wheel] ID: 3, Position: 2, Diameter: 16, Pressure: 30
+  [Wheel] ID: 4, Position: 3, Diameter: 16, Pressure: 30
+[Engine] stopped: serial=ENG-0001
+[Garage] Parking car: VIN=VIN-1234567890
+[Garage] Listing cars:
+  - VIN: VIN-1234567890
+[Garage] Retrieving car: VIN=VIN-1234567890
+[Car Diagnostics] VIN: VIN-1234567890, Odometer: 100 km, Wheels: 4
+[Engine Diagnostics] Serial: ENG-0001, Type: 1, Horsepower: 150, State: STOPPED, RPM: 0
+[FuelTank Diagnostics] Capacity: 50 liters, Current Level: 43.3333 liters
+  [Wheel] ID: 1, Position: 0, Diameter: 16, Pressure: 32
+  [Wheel] ID: 2, Position: 1, Diameter: 16, Pressure: 32
+  [Wheel] ID: 3, Position: 2, Diameter: 16, Pressure: 30
+  [Wheel] ID: 4, Position: 3, Diameter: 16, Pressure: 30
+Program completed successfully.
+[Car] destroyed: VIN=VIN-1234567890
+[Wheel] destroyed: id=1
+[Wheel] destroyed: id=2
+[Wheel] destroyed: id=3
+[Wheel] destroyed: id=4
+[FuelTank] destroyed
+[Engine] destroyed: serial=ENG-0001
